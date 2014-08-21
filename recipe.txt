@@ -1,0 +1,28 @@
+###
+###  Recipe file for A2_SyringePump
+###
+
+# Number of times to loop commands in this file
+cycles=1
+
+# Syringe inner diameter in mm
+diameter=7.0
+
+# Every line without diameter, cycles or # is considered a command
+# Commands are executed from the top down
+PHN 1 # Step 1
+FUN RAT
+RAT 1000 UM
+VOL 1000
+DIR INF
+
+PHN 2 # Step 2
+FUN RAT
+RAT 1000 UM
+VOL 1000
+DIR WDR
+
+PHN 3 # Step 3
+FUN STP
+
+RUN # Run the thing
